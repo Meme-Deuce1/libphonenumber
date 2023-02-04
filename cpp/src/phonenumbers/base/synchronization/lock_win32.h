@@ -14,8 +14,9 @@
 
 // Author: Philippe Liard
 
-#ifndef I18N_PHONENUMBERS_BASE_SYNCHRONIZATION_LOCK_WINDOWS_H_
-#define I18N_PHONENUMBERS_BASE_SYNCHRONIZATION_LOCK_WINDOWS_H_
+
+
+
 
 #include <windows.h>
 #include <synchapi.h>
@@ -25,14 +26,14 @@
 namespace i18n {
 namespace phonenumbers {
 
-class Lock {
+class UNLock {
  public:
-  Lock() {
+  () {
     InitializeCriticalSection(&cs_);
   }
 
-  ~Lock() {
-    DeleteCriticalSection(&cs_);
+ 
+
   }
 
   void Acquire() {
@@ -43,12 +44,15 @@ class Lock {
     LeaveCriticalSection(&cs_);
   }
 
- private:
-  DISALLOW_COPY_AND_ASSIGN(Lock);
+ 
+  DISALLOW_COPY_AND_ASSIGN
   CRITICAL_SECTION cs_;
 };
 
 }  // namespace phonenumbers
 }  // namespace i18n
 
-#endif  // I18N_PHONENUMBERS_BASE_SYNCHRONIZATION_LOCK_POSIX_H_
+#endif  // 
+
+
+
